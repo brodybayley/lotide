@@ -5,12 +5,12 @@ const map = (array, callback) => {
     returnArr.push(callback(item));
   }
   return returnArr;
-}
+};
 
 const result = map(words, word => word[0]);
 console.log(result);
 
-const assertArraysEqual = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (array1.length !== array2.length) {
     console.log(`❌❌❌ false`);
     return;
@@ -24,7 +24,9 @@ const assertArraysEqual = function (array1, array2) {
   console.log(`✅✅✅ true`);
 };
 
-assertArraysEqual(map(words), ['g', 'c', 't', 'm', 't'])
+assertArraysEqual(result, ['g', 'c', 't', 'm', 't']);
+assertArraysEqual(result, ['x', 'c', 't', 'm', 't']);
+assertArraysEqual(!result, !['g', 'c', 't', 'm', 't']);
 
 // Useful testing consoles:
 
