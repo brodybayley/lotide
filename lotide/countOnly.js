@@ -4,15 +4,27 @@ const assertEqual = function (actual, expected) {
   } else if (actual !== expected) {
     console.log(`🤷🏻‍♂️🤷🏻‍♂️🤷🏻‍♂️ Assertion Failed: ${actual} !== ${expected}`);
   }
+  return;
 };
 
 const countOnly = function (allItems, itemsToCount) {
   const results = {}
-
-  for (const item of allItems) {
-    console.log(item);
+  let itemsToCountArray = [];
+  for (const name in itemsToCount) {
+    if (itemsToCount[name]) {
+      itemsToCountArray.push(name);
+    }
   }
 
+  for (const item of allItems) {
+    if (itemsToCountArray.includes(item)) {
+      if (!results[item]) {
+        results[item] = 1
+      } else {
+        results[item] = results[item] + 1;
+      }
+    }
+  }
   return results;
 }
 
