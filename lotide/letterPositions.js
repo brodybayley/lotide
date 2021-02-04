@@ -1,15 +1,14 @@
 const letterPositions = function (string) {
   const results = {};
   for (let i = 0; i < string.length; i++) {
-    if (string[i] != ' ') {
+    if (string[i] !== ' ') {
       if (results.hasOwnProperty(string[i])) {
-        results[string[i]] + [i];
+        results[string[i]].push(i);
       } else if (string[i]) {
         results[string[i]] = [i];
       }
     }
   }
-  console.log(results)
   return results;
 };
 
@@ -27,18 +26,4 @@ const assertArraysEqual = function (array1, array2) {
   console.log(`✅✅✅ true`);
 };
 
-
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`❤️❤️❤️ Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🤷🏻‍♂️🤷🏻‍♂️🤷🏻‍♂️ Assertion Failed: ${actual} !== ${expected}`);
-  }
-  return;
-};
-
-let testStr1 = 'hello';
-
-let result1 = letterPositions(testStr1);
-
-assertArraysEqual(result1, { h: [0], e: [1], l: [2, 3], o: [4] });
+assertArraysEqual(letterPositions('hello').l, [2, 3]);
