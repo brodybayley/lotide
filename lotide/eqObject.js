@@ -10,22 +10,21 @@ const assertEqual = function (actual, expected) {
 const eqObjects = function (object1, object2) {
   const object1Keys = Object.keys(object1)
   const object2Keys = Object.keys(object2)
+  console.log(object1Keys);
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
   }
   for (let values of object1Keys) {
-    if (object1Keys[values] !== object2Keys[values]) {
-    } return false;
-
+    console.log(object1[values])
+    console.log(object1Keys[values])
+    if (Array.isArray(object1Keys[values]) && Array.isArray(object2Keys[values])) {
+      if (!eqArrays(object1Keys, object2Keys))
+        return false;
+    } else
+      return true;
   }
-  return true;
-}
 
+  const ab = { a: "1", b: "2" };
+  const ba = { b: "2", a: "1" };
+  console.log(eqObjects(ab, ba));
 
-
-const ab = { a: "1", b: "2" };
-const ba = { b: "3", a: "1" };
-eqObjects(ab, ba); // => true
-
-const abc = { a: "1", b: "2", c: "3" };
-console.log(eqObjects(ba, ab)); // => 
