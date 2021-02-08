@@ -32,5 +32,9 @@ The following functions are currently implemented:
 * `function4(countLetters)`: get count of each letter in a string
 * `function5(countOnly)`: get count for a subset of items in an array
 * `function6(eqArrays)`: takes two arrays and returns a boolean based on perfect match
-* `function5(eqObjects)`: takes two objects and returns a boolean based on perfect match
-* `function5(countOnly)`: get count for a subset of items in an array
+* `function7(eqObjects)`: takes two objects and returns a boolean based on perfect match
+* `function8(findKey)`: takes object and callback and return first key that returns truthy value
+* `function9(letterPositions)`: Return all indices in a string where characters are found
+* `function10(map)`: takes in a array and map and return a new array based on callback results
+* `function11(takeUntil)`: takes in an array and callback and collects items from the array until callback returns truthy
+* `function12(without)`: will return subset of a given array, removing unwanted elements

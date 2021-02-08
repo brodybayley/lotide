@@ -12,4 +12,4 @@ const assertArraysEqual = (array1, array2) => {
   console.log(`✅✅✅ true`);
 };
 
-module.exports = assertArraysEqual
+module.exports = assertArraysEqual;
