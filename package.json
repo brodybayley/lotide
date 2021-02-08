@@ -1,7 +1,7 @@
 {
   "name": "@bbayley/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "mini clone of lodash directory",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/brodybayley/lotide.git"
   },
-  "author": "",
+  "author": "Brody Bayley <brodybayley@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/brodybayley/lotide/issues"
