@@ -1,6 +1,6 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
-const letterPositions = (string) => {
+const letterPositions = string => {
   const results = {};
   for (let i = 0; i < string.length; i++) {
     if (string[i] !== ' ') {
@@ -14,5 +14,4 @@ const letterPositions = (string) => {
   return results;
 };
 
-
-assertArraysEqual(letterPositions('hello').l, [2, 3]);
+module.exports = letterPositions;
