@@ -10,16 +10,15 @@ const bestTVShowsByGenre = {
 
 describe("#findKeyByValue", () => {
   it("returns 'drama' from 'The Wire'", () => {
-    assert.deepEqual(findKeyByValue(bestTVShowsByGenre, 'The Wire'), 'drama')
+    assert.deepEqual(findKeyByValue(bestTVShowsByGenre, 'The Wire'), 'drama');
   });
-  it("returns undefined from 'That \'70s show'", () => {
-    assert.deepEqual(findKeyByValue(bestTVShowsByGenre, 'That \'70s show'), undefined)
+  it("returns undefined from 'That '70s show'", () => {
+    assert.deepEqual(findKeyByValue(bestTVShowsByGenre, "That '70s show"), undefined);
   });
-  it("returns undefined from 'That \'70s show'", () => {
-    assert.deepEqual(findKeyByValue(bestTVShowsByGenre, 'That \'70s show'), undefined)
+  it("returns 'scary' from 'Scary Movie'", () => {
+    assert.deepEqual(findKeyByValue(bestTVShowsByGenre, 'Scary Movie'), 'scary');
   });
 });
 
 
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 // assertEqual(findKeyByValue(bestTVShowsByGenre, "Scary Movie"), "drama");

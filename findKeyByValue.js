@@ -6,4 +6,4 @@ const findKeyByValue = (shows, value) => {
   }
 };
 
-module.exports = findKeyByValue
+module.exports = findKeyByValue;
