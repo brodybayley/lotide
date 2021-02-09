@@ -20,5 +20,3 @@ describe("#findKeyByValue", () => {
   });
 });
 
-
-// assertEqual(findKeyByValue(bestTVShowsByGenre, "Scary Movie"), "drama");
