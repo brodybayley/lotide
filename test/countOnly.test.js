@@ -18,13 +18,16 @@ describe("#countOnly", () => {
     const finalCount = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
     assert.strictEqual((finalCount["Jason"]), 1);
   });
+  it("returns undefined for 'Karima'", () => {
+    const finalCount = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+    assert.strictEqual((finalCount["Karima"]), undefined);
+  });
+  it("returns 2 for 'Fang'", () => {
+    const finalCount = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+    assert.strictEqual((finalCount["Fang"]), 2);
+  });
+  it("returns undefined for 'Agouhanna'", () => {
+    const finalCount = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+    assert.strictEqual((finalCount["Agouhanna"]), undefined);
+  });
 });
-
-
-
-// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-
-// assertEqual(result1["Jason"], 1);
-// assertEqual(result1["Karima"], undefined);
-// assertEqual(result1["Fang"], 2);
-// assertEqual(result1["Agouhanna"], undefined);
